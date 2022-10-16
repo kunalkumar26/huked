@@ -132,9 +132,7 @@ const SideDrawer = () => {
                             <BellIcon fontSize="2xl" m={1} />
                         </MenuButton>
                         <MenuList pl={2}>
-                            <MenuItem>
-                                {!notification && "No New Messages"}
-                            </MenuItem>
+                            {!notification.length && "No New Messages"}
                             {notification && notification.map((notif) => (
                                 <MenuItem
                                     key={notif._id}
